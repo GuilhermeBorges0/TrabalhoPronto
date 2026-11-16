@@ -1,0 +1,340 @@
+/* ==========================================
+   CONFIGURAÇÕES GERAIS
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #FF97CF;
+    color: #333333;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* ==========================================
+   CABEÇALHO
+========================================== */
+
+header {
+    background-color: #AD1457;
+    color: #ffffff;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    border-bottom: 5px solid #e5a93b;
+}
+
+header h1 {
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+header p {
+    font-style: italic;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    opacity: 0.9;
+}
+
+/* ==========================================
+   LAYOUT PRINCIPAL
+========================================== */
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+/* ==========================================
+   CONTEÚDO PRINCIPAL
+========================================== */
+
+main {
+    flex: 1;
+    min-width: 0;
+    background-color: #FFCBD9;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+main h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: #E91E63;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+}
+
+main p {
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+    text-align: justify;
+    overflow-wrap: break-word;
+}
+
+/* ==========================================
+   INTRODUÇÃO
+========================================== */
+
+.introducao {
+    margin-bottom: 2.5rem;
+}
+
+/* ==========================================
+   GALERIA DE PESQUISA
+========================================== */
+
+.galeria-pesquisa {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin: 2rem 0;
+}
+
+.item-galeria {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(173, 20, 87, 0.18);
+}
+
+/*
+   IMAGENS
+   A altura fica automática e sem limite máximo.
+   Isso mantém a proporção original e elimina a faixa
+   branca que aparecia à direita da pintura.
+*/
+
+.item-galeria img {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    max-height: none;
+    object-fit: initial;
+    object-position: left top;
+    border-radius: 8px;
+    border: 1px solid #dddddd;
+    margin: 0 0 0.6rem 0;
+    background: transparent;
+}
+
+/* ==========================================
+   REFERÊNCIAS DAS IMAGENS
+========================================== */
+
+.referencia-imagem {
+    display: block;
+    font-size: 0.78rem;
+    color: #666666;
+    margin-top: 0.3rem;
+    margin-bottom: 0.8rem;
+    font-style: italic;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.referencia-imagem a {
+    color: #7a2626;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.referencia-imagem a:hover {
+    color: #E91E63;
+}
+
+/* ==========================================
+   TEXTOS ABAIXO DAS IMAGENS
+========================================== */
+
+.item-galeria p {
+    margin-top: 0.7rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* ==========================================
+   CONCLUSÃO
+========================================== */
+
+.conclusao {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid rgba(173, 20, 87, 0.2);
+}
+
+.conclusao h2 {
+    color: #AD1457;
+}
+
+.conclusao p {
+    line-height: 1.8;
+}
+
+/* ==========================================
+   CRÉDITOS
+========================================== */
+
+.creditos-aluno {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed #AD1457;
+    font-style: italic;
+    color: #666666;
+}
+
+.creditos-aluno p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+/* ==========================================
+   RODAPÉ
+========================================== */
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* ==========================================
+   TABLETS
+========================================== */
+
+@media (max-width: 900px) {
+    .container {
+        padding: 0 1rem;
+        gap: 1rem;
+    }
+
+    main {
+        padding: 1.8rem;
+    }
+
+    .item-galeria img {
+        max-width: 100%;
+    }
+}
+
+/* ==========================================
+   CELULARES
+========================================== */
+
+@media (max-width: 768px) {
+    header {
+        padding: 2rem 1rem;
+    }
+
+    .container {
+        flex-direction: column;
+        margin: 1rem auto;
+        padding: 0 0.8rem;
+    }
+
+    main {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    main p {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .galeria-pesquisa {
+        gap: 2rem;
+    }
+
+    .item-galeria img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: none;
+    }
+
+    .item-galeria p {
+        font-size: 0.98rem;
+        text-align: left;
+    }
+
+    .conclusao {
+        margin-top: 2rem;
+    }
+
+    footer {
+        margin-top: 2rem;
+        padding: 1.2rem;
+    }
+}
+
+/* ==========================================
+   CELULARES PEQUENOS
+========================================== */
+
+@media (max-width: 480px) {
+    header {
+        padding: 1.5rem 0.8rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 0.85rem;
+    }
+
+    .container {
+        padding: 0 0.5rem;
+    }
+
+    main {
+        padding: 1rem;
+        border-radius: 7px;
+    }
+
+    main h2 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    main p {
+        font-size: 0.94rem;
+        line-height: 1.7;
+    }
+
+    .galeria-pesquisa {
+        gap: 1.5rem;
+    }
+
+    .item-galeria {
+        padding-bottom: 1.5rem;
+    }
+}
